@@ -1,72 +1,97 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<title>sunshine-hughes.com</title>
 	<meta charset="UTF-8">
+	<title>sunshine-hughes.com</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Sunshine Hughes business page">
 	<meta name="author" content="Sunshine Hughes">
 	<meta name="keywords" content="Sunshine, Hughes, business, portfolio">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css" media="screen">
 	<link rel="icon" type="favicon" href="favicon.ico">
 </head>
 
 <body>
 	<header>
 		<h1>Sunshine's Business Page</h1>
-
+	</header>
 
 		<nav>
 			<a href="#about">About</a>
 			<a href="#services">Services</a>
 			<a href="#contact">Contact</a>
+			<a href="contact.html">Contact Form</a>
 		</nav>
-	</header>
+
+<div class="content">
 
 	<aside>
-		<h2>My Projects</h2>
+		<h2>Completed Projects</h2>
 
-		<p><a href="https://www.tearsofthesoul.com">Tears of the Soul</a></p>
+		<p><a href="https://www.tearsofthesoul.com">Tears of the Soul</a><br>
+			A Compilation of Poetry &amp; Short Essays written by Sunshine Hughes and other Artists
+		</p>
 
-		<p><a href="https://seasonsofthesun.sunshine-hughes.com">Seasons of the Sun</a></p>
+		<p><a href="https://seasonsofthesun.sunshine-hughes.com">Seasons of the Sun</a><br>
+			A personal page of my life. Dedicated to my family: my boys, my babies, my hearts
+		</p>
 
-		<p><a href="https://withrowfinancialgroup.info">Withrow Financial Group</a></p>
+		<p><a href="https://withrowfinancialgroup.info">Withrow Financial Group</a><br>
+			Official business page of the Withrow Financial Group LLC - Insurance Company
+		</p>
 
-		<p><a href="https://bdcleaningllc502.com">B &amp; D Cleaning LLC</a></p>
+		<p><a href="https://bdcleaningllc502.com">B &amp; D Cleaning LLC</a><br>
+			Official business page of B&amp;D Cleaning LLC - Professional Corporate &amp; Residential Cleaning Company
+		</p>
 
-		<p><a href="https://pave502.netlify.app">P.A.V.E.</a></p>
+		<p><a href="https://pave502.netlify.app">P.A.V.E.</a><br>
+			Original business page of P.A.V.E. - Parents Against Violence Engagement (501c3) - A local Non-Profit organization dedicated to empowering parents &amp; families of inner city children
+		</p>
 	</aside>
 
-	<main>
-		<div class="#about">
+<div class="main-content">
+	<section class="about">
 			<h2 id="about">About</h2>
-			<p>This is the area about me and who I am</p>
-		</div>
+			<p>Welcome. </p>
+	</section>
 
-		<div class="#services">
+	<section class="services-section">
 			<h2 id="services">Services</h2>
-			<p>This is the area about what I can do and what services I offer</p>
 
-			<div class="row">
-				<div class="column">
-					<div class="card">
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="img_avatar.png" alt="Avatar" style="width: 300px; height: 300px;">
+					</div>
+					<div class="flip-card-back">
 						<h3>Peer Support Services</h3>
 						<p>I am a Kentucky state Certified Substance abuse &amp; Mental health Peer Support Specialist.
 							I provide services to individuals and groups seeking recovery based support services.</p>
-
 					</div>
 				</div>
+			</div>
 
-				<div class="column">
-					<div class="card">
+
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="img_avatar.png" alt="Avatar" style="width: 300px; height: 300px;">
+							</div>
+						<div class="flip-card-back">
 						<h3>Web Development</h3>
 						<p>I am a Certified Front-end Web Developer. I have designed 5 individual websites.</p>
 					</div>
 				</div>
+			</div>
 
-				<div class="column">
-					<div class="card">
+
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img src="img_avatar.png" alt="Avatar" style="width: 300px; height: 300px;">
+							</div>
+						<div class="flip-card-back">
 						<h3>Mentoring</h3>
 						<p>I am an experienced mentor with over 20 years of serving individuals and groups in the local
 							Louisville, KY area. I have worked with businesses and privately owned companies that
@@ -74,28 +99,34 @@
 							growth.</p>
 					</div>
 				</div>
+			</div>
 
 				<div class="column">
 					<div class="card">
+						<div class="flip-card">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img src="img_avatar.png" alt="Avatar" style="width: 300px; height: 300px;">
+								</div>
+							<div class="flip-card-back">
 						<h3>Family Advocacy</h3>
 						<p>I have 25+ years of providing supportive advocacy services to parent(s) in the Louisville KY
 							area. My services include attending court appointments, assistance with navigating and
 							communicating with health &amp; human services organizations, personal parental mediation,
 							and support in mental/ emotional crisis'.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		</section>
+	</div>
+</div>
 
-
-		<div class="#contact">
+	<footer class="contact-footer">
 			<h2 id="contact">Contact</h2>
 			<p>If you want more information on how I can serve you, please contact me via the following methods:</p>
-			<p>Email: <a href="mailto:">sunshinehughes2011@gmail.com</a><br> or click on the button.</p>
-		</div>
-	</main>
-
-	<footer>
+			<p>Email: <a href="mailto:">sunshinehughes2011@gmail.com</a><br> or click the button to complete the contact form<button type="text" id="button"><a href="contact.html">Contact</a></button>.</p>
 		<p>sunshine-hughes.com</p>
 	</footer>
 
