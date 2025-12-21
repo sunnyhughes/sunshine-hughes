@@ -15,6 +15,14 @@ CSS RESET & VARIABLES
 	--soft-silver: #f2f2f4;
 	--charcoal: #2f2f2f;
 	--white: #ffffff;
+	--pink: #f4c2d7;
+	--purple: #7b5fa3;
+	--blue: #4a6fa5;
+	--silver: #e6e6e6;
+	--charcoal: #2f2f2f;
+	--cream: #faf7f3;
+	--deep-plum: #5a3c6e;
+	--soft-cream: #f7f7f7;
 }
 
 body {
@@ -63,21 +71,34 @@ header {
 	padding: 1.5rem 0;
 }
 
-.nav {
+/* =====================
+MAIN NAVIGATION 
+=================== */
+
+.main-nav .nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.nav ul {
+.main-nav .nav ul {
 	display: flex;
 	gap: 1.5rem;
 	list-style: none;
 }
 
-.nav a {
+.main-nav .nav a {
 	font-weight: 500;
 	color: var(--slate-blue);
+	text-decoration: none;
+}
+
+.main-nav .nav a:hover {
+	text-decoration: underline;
+}
+
+.main-nav .nav a.active {
+	text-decoration: underline;
 }
 
 /* =====================
@@ -204,33 +225,239 @@ footer {
 }
 
 
-.contact-form {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	margin: auto;
+/* ==================
+WORK PAGE STYLES
+================== */
+
+.work-page body {
+font-family: 'Inter', sans-serif;
+background-color: var(--cream);
+color: var(--charcoal);
+line-height: 1.7;
 }
 
-.contact {
-	margin: 10px;
-	padding: 10px;
-	font-size: 18px;
-	border: 2px solid black;
-	justify-content: center;
+
+.work-page header {
+padding: 4rem 1.5rem 2rem;
+text-align: center;
 }
 
-.contact label, textarea, input {
-	display: block;
-	width: 80%;
-	margin-bottom: 10px;
 
+.work-page header h1 {
+font-family: 'Playfair Display', serif;
+font-size: 2.6rem;
+margin-bottom: 1rem;
 }
+
+
+.work-page header p {
+max-width: 720px;
+margin: 0 auto;
+font-size: 1.1rem;
+opacity: 0.85;
+}
+
+
+.work-page section {
+padding: 4rem 1.5rem;
+}
+
+
+.work-page.container {
+max-width: 1100px;
+margin: 0 auto;
+}
+
+
+.work-page h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+margin-bottom: 2rem;
+}
+
+
+.work-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+}
+
+
+.work-card {
+background: white;
+border-radius: 14px;
+padding: 2rem;
+box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+
+.work-card h3 {
+font-family: 'Playfair Display', serif;
+margin-bottom: 0.75rem;
+}
+
+
+.work-card p {
+font-size: 0.95rem;
+margin-bottom: 1.5rem;
+opacity: 0.9;
+}
+
+
+.work-card a {
+text-decoration: none;
+font-weight: 500;
+color: var(--purple);
+align-self: flex-start;
+}
+
+
+.work-card a:hover {
+text-decoration: underline;
+}
+
+
+.personal-note {
+margin-top: 4rem;
+background: linear-gradient(135deg, var(--pink), var(--silver));
+padding: 3rem;
+border-radius: 16px;
+}
+
+
+.personal-note h3 {
+font-family: 'Playfair Display', serif;
+margin-bottom: 1rem;
+}
+
+
+.personal-note p {
+max-width: 700px;
+opacity: 0.9;
+}
+
+
+.work-page footer {
+padding: 3rem 1.5rem;
+text-align: center;
+font-size: 0.9rem;
+opacity: 0.7;
+}
+
+
+/* =========================
+   SERVICES PAGE STYLES
+========================= */
+
+.services-page .page-intro {
+	padding: 4rem 1rem 2.5rem;
+	text-align: center;
+}
+
+.services-page .page-intro h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.services-page .page-intro p {
+	max-width: 800px;
+	margin: 0 auto;
+	font-size: 1.1rem;
+	color: var(--charcoal);
+}
+
+
+/* SERVICES LIST */
+
+.services-page .services-list {
+	padding: 3rem 1rem 4rem;
+}
+
+.services-page .services-list .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+}
+
+
+/* SERVICE CARD */
+
+.services-page .service-card {
+	background: var(--soft-cream);
+	padding: 2rem;
+	border-radius: 16px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-page .service-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+.services-page .service-card h2 {
+	font-size: 1.4rem;
+	margin-bottom: 0.3rem;
+	color: var(--deep-plum);
+}
+
+.services-page .service-subtitle {
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--slate-blue);
+	margin-bottom: 1rem;
+}
+
+.services-page .service-card p {
+	font-size: 0.95rem;
+	line-height: 1.6;
+	margin-bottom: 1rem;
+}
+
+.services-page .service-card ul {
+	padding-left: 1.2rem;
+}
+
+.services-page .service-card li {
+	margin-bottom: 0.5rem;
+	font-size: 0.9rem;
+}
+
 
 
 /* Responsive columns */
 @media screen and (max-width: 768px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-	text-align: center;
-  }
+	.main-nav .nav {
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.main-nav .nav ul {
+		flex-wrap:  wrap;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	.main-nav .nav h2 {
+		font-size: 1.3rem
+	}
+
+
+	.hero-content {
+    	grid-template-columns: 1fr;
+		text-align: center;
+  	}
+
+	.services-page .page-intro h1 {
+		font-size: 2rem;
+	}
+
+	.services-page .service-card {
+		padding: 1.6rem;
+	}
 }
+
