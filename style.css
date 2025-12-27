@@ -318,6 +318,13 @@ footer {
 	justify-content: center;
 }
 
+.about-page .about-media.portrait img {
+	max-width: 320px;
+	height: auto;
+	object-fit: contain;
+	box-shadow: none;
+}
+
 .about-page .image-placeholder {
 	width: 100%;
 	max-width: 420px;
@@ -361,6 +368,13 @@ footer {
 	margin: 3rem 0;
 }
 
+.about-page .about-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 20px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
 
 /* ==================
 WORK PAGE STYLES
