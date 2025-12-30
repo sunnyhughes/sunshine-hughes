@@ -17,8 +17,7 @@
 
 <body class="contact-page">
 
-	<header>
-		<nav class="main-nav">
+	<header class="main-nav">
 			<div class="container nav">
 				<h2>Sunshine Hughes</h2>
 				<ul>
@@ -30,28 +29,70 @@
 					<li><a href="contact.html" class="active">Contact</a></li>
 				</ul>
 			</div>
-		</nav>
 	</header>
 
-		<div class="contact">
+	<section class="page-intro">
+		<h1>Let's Connect</h1>
+		<p>If you're interested in working together, have a question, I'd love to hear from you. </p>
+	</section>
 
-			<h2 id="contact-form">Contact</h2>
-			<form action="mailto:" method="post" enctype="text/plain">
-				<label for="fname">First name:</label>
-				<input type="text" id="fname" value="">
-				<label for="lname">Last name:</label>
-				<input type="text" id="lname" value="">
-				<label for="phone">Phone</label>
-				<input type="text" id="phone" value="">
-				<label for="email">Email:</label>
-				<input type="text" id="email" value="">
-				<label for="message">Message:</label>
-				<textarea id="message" rows="10" cols="30"></textarea>
-				<input type="submit" value="Submit">
+		<section class="contact-section">
+			<div class="container contact-grid">
 
-			</form>
 
-		</div>
+			<div class="contact-copy">
+				<h2>Let's Connect</h2>
+
+				<p>Whether you're exploring an idea, seeking guidance, or ready to collaborate, you're welcome to reach out.</p>
+
+				<p>I work with individuals, families, small businesses, and community organizations. There's no pressure and no obligation - just a conversation.</p>
+
+				<p class="contact-note">
+					All messages are treated with care, respect, and confidentiality.
+				</p>
+
+			</div>
+
+			<div class="contact-form-wrapper">
+				<form
+					name="contact"
+					method="post"
+					data-netlify="true"
+					netlify-honeypot="bot-field"
+					>
+
+					<input type="hidden" name="form-name" value="contact">
+
+					<p class="hidden">
+						<label>Don't fill this out: <input name="bot-field"></label>
+					</p>
+
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required>
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" required>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="6" required></textarea>
+					</div>
+
+					<button type="submit" class="btn-primary">Send Message</button>
+				</form>
+
+			</div>
+
+			</div>
+		</section>
+
+		<footer>
+			<p>© 2025 Sunshine Hughes | sunshine-hughes.com | All Rights Reserved</p>
+		</footer>
 
 </body>
 </html>

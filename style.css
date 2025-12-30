@@ -29,6 +29,7 @@ body {
 	font-family: 'Inter', sans-serif;
 	color: var(--charcoal);
 	background-color: var(--white);
+	font-size: 1rem;
 	line-height: 1.6;
 }
 
@@ -40,6 +41,12 @@ h1, h2, h3 {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
 }
 
 img {
@@ -75,10 +82,22 @@ header {
 MAIN NAVIGATION 
 =================== */
 
+.main-nav {
+	padding: 1.5rem 0;
+}
+
 .main-nav .nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 0;
+	height: auto;
+}
+
+.main-nav .nav h2 {
+	margin: 0;
+	line-height: 1;
+	font-size: 1.5rem;
 }
 
 .main-nav .nav ul {
@@ -388,20 +407,19 @@ line-height: 1.7;
 }
 
 
-.work-page header {
-padding: 4rem 1.5rem 2rem;
+.work-page .page-intro {
+padding: 4rem 1rem 2.5rem;
 text-align: center;
 }
 
 
-.work-page header h1 {
-font-family: 'Playfair Display', serif;
+.work-page .page-intro h1 {
 font-size: 2.6rem;
 margin-bottom: 1rem;
 }
 
 
-.work-page header p {
+.work-page .page-intro p {
 max-width: 720px;
 margin: 0 auto;
 font-size: 1.1rem;
@@ -414,7 +432,7 @@ padding: 4rem 1.5rem;
 }
 
 
-.work-page.container {
+.work-page .container {
 max-width: 1100px;
 margin: 0 auto;
 }
@@ -486,17 +504,11 @@ margin-bottom: 1rem;
 
 
 .personal-note p {
+margin-top: 1rem;
 max-width: 700px;
 opacity: 0.9;
 }
 
-
-.work-page footer {
-padding: 3rem 1.5rem;
-text-align: center;
-font-size: 0.9rem;
-opacity: 0.7;
-}
 
 
 /* =========================
@@ -577,7 +589,288 @@ opacity: 0.7;
 	font-size: 0.9rem;
 }
 
+/* =========================
+   MISSION & IMPACT PAGE
+========================= */
 
+.mission-page .page-intro {
+  padding: 4rem 1rem 2.5rem;
+  text-align: center;
+}
+
+.mission-page .page-intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.mission-page .page-intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--charcoal);
+}
+
+
+/* SECTION SPACING */
+
+.mission-page section {
+  padding: 4rem 0;
+}
+
+
+.mission-page h2 {
+  font-size: 1.6rem;
+  color: var(--deep-plum);
+  margin-bottom: 1rem;
+}
+
+
+/* HOW I SERVE */
+
+.mission-page .impact-list {
+  margin-top: 1.5rem;
+  padding-left: 1.2rem;
+}
+
+.mission-page .impact-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+
+/* VALUES */
+
+.mission-page .mission-values {
+  background: var(--soft-cream);
+  margin-top: 2rem;
+}
+
+.mission-page .values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mission-page .value-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.mission-page .value-card h3 {
+  color: var(--slate-blue);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.mission-page .value-card p {
+  font-size: 0.9rem;
+}
+
+.mission-page .impact-flex {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.mission-page .impact-section .impact-image {
+	padding-right: 2rem;
+}
+
+.mission-page .impact-image {
+	flex: 1;
+	max-width: 400px;
+}
+.mission-page .impact-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.mission-page .impact-text {
+  flex: 2;
+}
+
+.mission-page .impact-section .impact-flex {
+	flex-direction: row-reverse;
+}
+
+.mission-page .impact-list {
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.mission-page .impact-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.mission-page .service-impact .impact-image {
+	flex-direction: row;
+	padding-left: 2rem;
+}
+
+
+/* =========================
+   CONTACT PAGE STYLES
+========================= */
+
+.contact-page .page-intro {
+	padding: 4rem 1rem 2.5rem;
+	text-align: center;
+}
+
+.contact-page .page-intro h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.contact-page .page-intro p {
+	max-width: 720px;
+	margin: 0 auto;
+	font-size: 1.1rem;
+	color: var(--charcoal);
+}
+
+/* CONTACT SECTION */
+
+.contact-page .contact-section {
+	padding: 4rem 1rem;
+}
+
+.contact-page .contact-form {
+	max-width: 600px;
+	margin: 0 auto;
+	background: var(--soft-cream);
+	padding: 3rem;
+	border-radius: 20px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* FORM ELEMENTS */
+
+.contact-page .form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1.5rem;
+}
+
+.contact-page label {
+	font-weight: 500;
+	margin-bottom: 0.4rem;
+	color: var(--deep-plum);
+}
+
+.contact-page input,
+.contact-page textarea {
+	padding: 0.7rem 0.8rem;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+}
+
+.contact-page input:focus,
+.contact-page textarea:focus {
+	outline: none;
+	border-color: var(--soft-plum);
+}
+
+/* BUTTON */
+
+.contact-page button {
+	border: none;
+	cursor: pointer;
+	margin-top: 0.5rem;
+}
+
+/* HIDDEN (HONEYPOT) */
+
+.contact-page .hidden {
+	display: none;
+}
+
+.contact-page .contact-section {
+  padding: 4rem 0;
+}
+
+.contact-page .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* LEFT COPY */
+
+.contact-page .contact-copy h2 {
+  font-size: 1.6rem;
+  color: var(--deep-plum);
+  margin-bottom: 1rem;
+}
+
+.contact-page .contact-copy p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  max-width: 500px;
+}
+
+.contact-page .contact-note {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 1.5rem;
+}
+
+/* FORM */
+
+.contact-page form {
+  background: var(--soft-cream);
+  padding: 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.contact-page label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+  color: var(--charcoal);
+}
+
+.contact-page input,
+.contact-page textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  margin-top: 0.4rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.contact-page textarea {
+  resize: vertical;
+}
+
+.contact-page button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 30px;
+  border: none;
+  background: var(--soft-plum);
+  color: var(--white);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.contact-page button:hover {
+  opacity: 0.9;
+}
 
 /* Responsive columns */
 @media screen and (max-width: 768px) {
@@ -622,5 +915,41 @@ opacity: 0.7;
 	.services-page .service-card {
 		padding: 1.6rem;
 	}
+
+	.mission-page .impact-flex {
+    	flex-direction: column;
+    	text-align: center;
+  	}
+
+	.mission-page .impact-section .impact-flex {
+		flex-direction: column;
+	}
+
+	.mission-page .impact-image {
+
+		padding: 0;
+		max-width: 100%;
+	}
+
+	.mission-page .impact-text {
+    	width: 100%;
+  	}
+
+	.contact-page .contact-form {
+		padding: 2rem 1.5rem;
+	}
+
+	.contact-page .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page .contact-copy {
+    text-align: center;
+  }
+
+  .contact-page .contact-copy p {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
