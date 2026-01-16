@@ -8,17 +8,13 @@
 	<meta name="description" content="Sunshine Hughes business page">
 	<meta name="author" content="Sunshine Hughes">
 	<meta name="keywords" content="Sunshine, Hughes, business, portfolio">
-	<link rel="stylesheet" href="style.css" media="screen">
-	<link rel="icon" type="favicon" href="/icons/favicon.ico">
+	<link rel="icon" href="/icons/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png">
-		<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" >
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap">
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -37,17 +33,21 @@
 	</header>
 
 	<section class="hero">
-		<div  class="container hero-content">
+		<div class="container hero-content">
 			<div>
 				<h1>Creative Solutions. Grounded Support. Meaningful Impact</h1>
-				<p>I'm Sunshine Hughes - a web developer, peer support specialist, and family advocate dedicated to building accessible solutions and empowering individuals and organizations.</p>
+				<p>I'm Sunshine Hughes - a web developer, peer support specialist, and family advocate dedicated to
+					building accessible solutions and empowering individuals and organizations.</p>
 				<div class="hero-buttons">
 					<a href="work.html" class="btn-primary">View My Work</a>
 					<a href="contact.html" class="btn-secondary">Partner With Me</a>
 				</div>
 			</div>
 			<div>
-				<img src="images/sketchedheadshot.jpg" alt="Sunshine Hughes">
+				<picture>
+				<source srcset="images/sketchedheadshot.webp" type="image/webp">
+				<img src="images/sketchedheadshot.png" alt="Sunshine Hughes">
+				</picture>
 			</div>
 		</div>
 	</section>
@@ -55,65 +55,93 @@
 
 	<section class="credibility">
 		<div class="container card-grid">
-			<div class="card"><h3>Certified Peer Support Specialist</h3><p>Recovery-oriented and trauma-informed</p></div>
-			<div class="card"><h3>Family Advocacy</h3><p>Empowering families through education.</p></div>
-			<div class="card"><h3>Web Development</h3><p>Accessible, purpose-driven design.</p></div>
-			<div class="card"><h3>Community Focused</h3><p>Lived-informed, ethical practice.</p></div>
+			<div class="card">
+				<h3>Certified Peer Support Specialist</h3>
+				<p>Recovery-oriented and trauma-informed</p>
+			</div>
+			<div class="card">
+				<h3>Family Advocacy</h3>
+				<p>Empowering families through education.</p>
+			</div>
+			<div class="card">
+				<h3>Web Development</h3>
+				<p>Accessible, purpose-driven design.</p>
+			</div>
+			<div class="card">
+				<h3>Community Focused</h3>
+				<p>Lived-informed, ethical practice.</p>
+			</div>
 		</div>
 	</section>
 
-		<section class="services">
-			<div class="container">
-				<h2>What I do</h2>
-				<div class="card-grid">
-					<div class="card"><h3>Web Design &amp; Development</h3><p>Custom websites built with clarity, accessibility, and purpose</p></div>
-					<div class="card"><h3>Peer Support Services</h3><p>Support grounded in empathy, training, and lived experience</p></div>
-					<div class="card"><h3>Family Advocacy &amp; Training</h3><p>Education and guidance to strengthen families and systems</p></div>
-					<div class="card"><h3>Mentoring &amp; Facilitation</h3><p>Encourage growth, confidence, and long-term success</p></div>
+	<section class="services">
+		<div class="container">
+			<h2>What I do</h2>
+			<div class="card-grid">
+				<div class="card">
+					<h3>Web Design &amp; Development</h3>
+					<p>Custom websites built with clarity, accessibility, and purpose</p>
+				</div>
+				<div class="card">
+					<h3>Peer Support Services</h3>
+					<p>Support grounded in empathy, training, and lived experience</p>
+				</div>
+				<div class="card">
+					<h3>Family Advocacy &amp; Training</h3>
+					<p>Education and guidance to strengthen families and systems</p>
+				</div>
+				<div class="card">
+					<h3>Mentoring &amp; Facilitation</h3>
+					<p>Encourage growth, confidence, and long-term success</p>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section class="mission-preview">
-			<div class="container">
-				<h2>Mission &amp; Impact</h2>
-				<p>My work combines professional skill, lived-informed insight, and a commitment to growth - creating meaningful outcomes for individuals, families, and organizations</p>
-			</div>
-		</section>
+	<section class="mission-preview">
+		<div class="container">
+			<h2>Mission &amp; Impact</h2>
+			<p>My work combines professional skill, lived-informed insight, and a commitment to growth - creating
+				meaningful outcomes for individuals, families, and organizations</p>
+		</div>
+	</section>
 
-		<section>
-			<div class="container">
-				<h2>Featured Work</h2>
-				<div class="portfolio-grid">
-					<div class="card">
-						<h3>B &amp; D Cleaning LLC</h3>
-						<p>Official website for B &amp; D Cleaning LLC - Designed to support small business visibility and client outreach</p>
-						<a href="https://bdcleaningllc502.com" target="_blank">View Live Site &gt;</a>
-					</div>
-					<div class="card">
-						<h3>Withrow Financial Group</h3>
-						<p>Official Website for Withrow Financial Group - Focused on clarity, trust, and client engagement</p>
-						<a href="https://withrowfinancialgroup.info" target="_blank">View Live Site &gt;</a>
-					</div>
-					<div class="card">
-						<h3>P.A.V.E. - Parents Against Violence Engagement (501c3)</h3>
-						<p>Original website for P.A.V.E. - Supporting community outreach and prevention efforts</p>
-						<a href="https://pave502.netlify.app" target="_blank">View Live Site &gt;</a>
-					</div>
+	<section>
+		<div class="container">
+			<h2>Featured Work</h2>
+			<div class="portfolio-grid">
+				<div class="card">
+					<h3>B &amp; D Cleaning LLC</h3>
+					<p>Official website for B &amp; D Cleaning LLC - Designed to support small business visibility and
+						client outreach</p>
+					<a href="https://bdcleaningllc502.com" target="_blank">View Live Site &gt;</a>
+				</div>
+				<div class="card">
+					<h3>Withrow Financial Group</h3>
+					<p>Official Website for Withrow Financial Group - Focused on clarity, trust, and client engagement
+					</p>
+					<a href="https://withrowfinancialgroup.info" target="_blank">View Live Site &gt;</a>
+				</div>
+				<div class="card">
+					<h3>P.A.V.E. - Parents Against Violence Engagement (501c3)</h3>
+					<p>Original website for P.A.V.E. - Supporting community outreach and prevention efforts</p>
+					<a href="https://pave502.netlify.app" target="_blank">View Live Site &gt;</a>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<section class="collaboration">
-			<div class="container">
-				<h2>Let's Collaborate</h2>
-				<p>Open to partnerships, grants, and opportunities that expand community impact</p>
-			</div>
-		</section>
+	<section class="collaboration">
+		<div class="container">
+			<h2>Let's Collaborate</h2>
+			<p>Open to partnerships, grants, and opportunities that expand community impact</p>
+		</div>
+	</section>
 
-		<footer>
-			<p>&copy; 2025 Sunshine Hughes | sunshine-hughes.com | All Rights Reserved</p>
-		</footer>
+	<footer>
+		<p>&copy; 2025 Sunshine Hughes | sunshine-hughes.com | All Rights Reserved</p>
+	</footer>
 
 </body>
+
 </html>
