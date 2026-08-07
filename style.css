@@ -19,7 +19,6 @@ CSS RESET & VARIABLES
 	--purple: #7b5fa3;
 	--blue: #4a6fa5;
 	--silver: #e6e6e6;
-	--charcoal: #2f2f2f;
 	--cream: #faf7f3;
 	--deep-plum: #5a3c6e;
 	--soft-cream: #f7f7f7;
@@ -52,6 +51,36 @@ p {
 img {
 	max-width: 100%;
 	display: block;
+}
+
+/* Keyboard users need to see where they are. :focus-visible keeps the ring
+   off mouse clicks, so this costs the pointer experience nothing. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+	outline: 3px solid var(--deep-plum);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+/* Sits off-screen until tabbed to, so keyboard and screen-reader users can
+   jump the nav instead of walking it on every page. */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	z-index: 100;
+	padding: 0.75rem 1.25rem;
+	background: var(--deep-plum);
+	color: var(--white);
+	font-weight: 500;
+	border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+	left: 0;
 }
 
 /* ================
@@ -94,10 +123,15 @@ MAIN NAVIGATION
 	height: auto;
 }
 
-.main-nav .nav h2 {
+/* The site name used to be an <h2>, which put a heading above the page's
+   <h1> on every page. It is a link now; these rules keep its old look. */
+.main-nav .nav .site-title {
 	margin: 0;
 	line-height: 1;
 	font-size: 1.5rem;
+	font-family: 'Playfair Display', serif;
+	color: var(--soft-plum);
+	font-weight: 500;
 }
 
 .main-nav .nav ul {
@@ -168,6 +202,14 @@ CREDIBILITY SNAPSHOT
 
 .credibility {
 	background: var(--soft-silver);
+}
+
+/* The reset at the top zeroes every heading margin, so these section
+   headings were sitting flush against the grids underneath them. */
+.credibility h2,
+.services h2,
+.ventures h2 {
+	margin-bottom: 2rem;
 }
 
 .card-grid {
@@ -509,7 +551,7 @@ border-radius: 16px;
 }
 
 
-.personal-note h3 {
+.personal-note h2 {
 font-family: 'Playfair Display', serif;
 margin-bottom: 1rem;
 }
@@ -519,6 +561,28 @@ margin-bottom: 1rem;
 margin-top: 1rem;
 max-width: 700px;
 opacity: 0.9;
+}
+
+
+/* The personal sites sit in a normal card grid below the gradient panel,
+   so they read as siblings of the professional work above them. */
+.personal-note + .work-grid {
+	margin-top: 2rem;
+}
+
+
+/* ===================
+VENTURES
+=================== */
+
+.ventures {
+	background: var(--soft-silver);
+}
+
+.ventures .section-lead {
+	max-width: 700px;
+	margin-bottom: 2.5rem;
+	opacity: 0.9;
 }
 
 
