@@ -68,7 +68,10 @@ textarea:focus-visible,
 /* Sits off-screen until tabbed to, so keyboard and screen-reader users can
    jump the nav instead of walking it on every page. */
 .skip-link {
-	position: absolute;
+	/* Fixed rather than absolute: with a sticky header the link has to be
+	   reachable from wherever the reader already is, not only at the top
+	   of the document. */
+	position: fixed;
 	left: -9999px;
 	top: 0;
 	z-index: 100;
@@ -111,8 +114,22 @@ header {
 MAIN NAVIGATION 
 =================== */
 
+/* The nav follows the reader down the page. It needs its own opaque
+   background because content now scrolls underneath it. */
 .main-nav {
 	padding: 1.5rem 0;
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	background: var(--soft-silver);
+	/* A soft edge so the bar reads as a layer above the page it covers. */
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* In-page jumps (the skip link, any #anchor) would otherwise land with
+   their target hidden behind the sticky bar. */
+html {
+	scroll-padding-top: 7rem;
 }
 
 .main-nav .nav {
@@ -996,20 +1013,30 @@ VENTURES
 	
 /* Responsive columns */
 @media screen and (max-width: 768px) {
+	/* The bar is sticky, so on a phone it has to stay shallow — the links
+	   wrap to two rows and every extra pixel here is content lost. */
+	.main-nav {
+		padding: 0.6rem 0;
+	}
+
 	.main-nav .nav {
 		flex-direction: column;
 		align-items: center;
-		gap: 1rem;
+		gap: 0.5rem;
 	}
 
 	.main-nav .nav ul {
 		flex-wrap:  wrap;
 		justify-content: center;
-		gap: 1rem;
+		gap: 0.5rem 1rem;
 	}
 
-	.main-nav .nav h2 {
-		font-size: 1.3rem
+	.main-nav .nav .site-title {
+		font-size: 1.3rem;
+	}
+
+	html {
+		scroll-padding-top: 9rem;
 	}
 
 
